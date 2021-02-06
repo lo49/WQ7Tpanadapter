@@ -354,7 +354,7 @@ class BooleanDialog(ViewBase):
                 which is called when the user cancels.
                 """
                 self.value = str(initial)
-		            self.unit_text = unit_text
+		self.unit_text = unit_text
                 self.model = model
                 self.accept = accept
                 self.cancel = cancel
