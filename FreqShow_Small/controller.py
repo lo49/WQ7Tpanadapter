@@ -67,18 +67,18 @@ class FreqShowController(object):
 			cancel=self._change_to_previous, **kwargs))
 
 	def filter_dialog(self,label_text, unit_text, **kwargs):
-                """Open a filter dialog which goes back to the previous view when
-                canceled.
-                """
-                self.change_view(FilterDialog(self.model, label_text, unit_text,
-                        cancel=self._change_to_previous, **kwargs))
+		"""Open a filter dialog which goes back to the previous view when
+		canceled.
+		"""
+		self.change_view(FilterDialog(self.model, label_text, unit_text,
+                      cancel=self._change_to_previous, **kwargs))
 
-   def boolean_dialog(self,label_text, unit_text, **kwargs):
-                """Open a boolean dialog which goes back to the previous view when
-                canceled.
-                """
-                self.change_view(BooleanDialog(self.model, label_text, unit_text,
-                        cancel=self._change_to_previous, **kwargs))
+	def boolean_dialog(self,label_text, unit_text, **kwargs):
+    """Open a boolean dialog which goes back to the previous view when
+    canceled.
+    """
+    self.change_view(BooleanDialog(self.model, label_text, unit_text,
+            cancel=self._change_to_previous, **kwargs))
 
 
 
