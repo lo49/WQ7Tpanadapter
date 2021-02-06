@@ -18,17 +18,18 @@ pandoc
 
 https://www.scipy.org/install.html
 install script :
-
-python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
-
+```console
+pip3 install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+```
 OR
 alternate install script:
-
+```console
 sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook
 python-pandas python-sympy python-nose
+```
 
 INSTALL RTL-SDR
-
+```console
 cd ~
 git clone git://git.osmocom.org/rtl-sdr.git
 cd rtl-sdr
@@ -40,6 +41,7 @@ sudo make install
 sudo ldconfig
 
 sudo pip install pyrtlsdr
+```
 
 INSTALL the WQ7Tpanadapter software 
 
