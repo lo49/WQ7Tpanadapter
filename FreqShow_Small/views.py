@@ -347,49 +347,49 @@ class BooleanDialog(ViewBase):
         """Dialog which asks the user to enter a boolean value."""
 
         def __init__(self, model, label_text, unit_text, initial='0', accept=None, cancel=None):
-                """Create boolean dialog for provided model and with given label and unit
-                text.  Can provide an optional initial value (default to True), an accept
-                callback function which is called when the user accepts the dialog (and
-                the chosen value will be sent as a single parameter), a cancel callback
-                which is called when the user cancels.
-                """
-                self.value = str(initial)
-		self.unit_text = unit_text
-                self.model = model
-                self.accept = accept
-                self.cancel = cancel
-                # Initialize button grid.
-                self.buttons = ui.ButtonGrid(model.width, model.height, 4, 5)
-                self.buttons.add(0, 1, 'False', font_size=freqshow.NUM_FONT, click=self.false_click)
-                self.buttons.add(1, 1, 'True', font_size=freqshow.NUM_FONT, click=self.true_click)
-                self.buttons.add(3, 3, 'CANCEL', click=self.cancel_click,
-                        bg_color=freqshow.CANCEL_BG)
-                self.buttons.add(3, 4, 'ACCEPT', click=self.accept_click,
-                        bg_color=freqshow.ACCEPT_BG)
-                # Build label text for faster rendering.
-                self.input_rect = (0, 0, self.model.width, self.buttons.row_size)
-                self.label = ui.render_text(label_text, size=freqshow.MAIN_FONT,
-                        fg=freqshow.INPUT_FG, bg=freqshow.INPUT_BG)
-                self.label_pos = ui.align(self.label.get_rect(), self.input_rect,
-                        horizontal=ui.ALIGN_LEFT, hpad=2)
+	    """Create boolean dialog for provided model and with given label and unit
+            text.  Can provide an optional initial value (default to True), an accept
+            callback function which is called when the user accepts the dialog (and
+            the chosen value will be sent as a single parameter), a cancel callback
+            which is called when the user cancels.
+            """
+            self.value = str(initial)
+            self.unit_text = unit_text
+            self.model = model
+            self.accept = accept
+            self.cancel = cancel
+            # Initialize button grid.
+            self.buttons = ui.ButtonGrid(model.width, model.height, 4, 5)
+            self.buttons.add(0, 1, 'False', font_size=freqshow.NUM_FONT, click=self.false_click)
+            self.buttons.add(1, 1, 'True', font_size=freqshow.NUM_FONT, click=self.true_click)
+            self.buttons.add(3, 3, 'CANCEL', click=self.cancel_click,
+                  bg_color=freqshow.CANCEL_BG)
+            self.buttons.add(3, 4, 'ACCEPT', click=self.accept_click,
+                  bg_color=freqshow.ACCEPT_BG)
+            # Build label text for faster rendering.
+            self.input_rect = (0, 0, self.model.width, self.buttons.row_size)
+            self.label = ui.render_text(label_text, size=freqshow.MAIN_FONT,
+                  fg=freqshow.INPUT_FG, bg=freqshow.INPUT_BG)
+            self.label_pos = ui.align(self.label.get_rect(), self.input_rect,
+                  horizontal=ui.ALIGN_LEFT, hpad=2)
 
         def render(self, screen):
-                # Clear view and draw background.
-                screen.fill(freqshow.MAIN_BG)
-                # Draw input background at top of screen.
-                screen.fill(freqshow.INPUT_BG, self.input_rect)
-                # Render label and value text.
-                screen.blit(self.label, self.label_pos)
-                value_label = ui.render_text('{0} {1}'.format(self.value, self.unit_text),
-                        size=freqshow.NUM_FONT, fg=freqshow.INPUT_FG, bg=freqshow.INPUT_BG)
-                screen.blit(value_label, ui.align(value_label.get_rect(), self.input_rect,
-                        horizontal=ui.ALIGN_RIGHT, hpad=-2))
-                # Render buttons.
-                self.buttons.render(screen)
+            # Clear view and draw background.
+            screen.fill(freqshow.MAIN_BG)
+            # Draw input background at top of screen.
+            screen.fill(freqshow.INPUT_BG, self.input_rect)
+            # Render label and value text.
+            screen.blit(self.label, self.label_pos)
+            value_label = ui.render_text('{0} {1}'.format(self.value, self.unit_text),
+                  size=freqshow.NUM_FONT, fg=freqshow.INPUT_FG, bg=freqshow.INPUT_BG)
+            screen.blit(value_label, ui.align(value_label.get_rect(), self.input_rect,
+                  horizontal=ui.ALIGN_RIGHT, hpad=-2))
+            # Render buttons.
+            self.buttons.render(screen)
 
 
         def click(self, location):
-                self.buttons.click(location)
+            self.buttons.click(location)
 
         # Button click handlers follow below.
 
