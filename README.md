@@ -44,20 +44,20 @@ sudo pip install pyrtlsdr
 ```
 
 INSTALL the WQ7Tpanadapter software 
-
+```console
 cd ~
-git clone https://github.com/Banjopkr/WQ7Tpanadapter.git
-
+git clone https://github.com/lo49/WQ7Tpanadapter.git
+```
 If you want to use 7" or other large display
-
+```console
 sudo cp -r WQ7Tpanadapter/FreqShow_Large FreqShow_Large
 sudo cp -r FreqShow_Large/FreqShow.desktop Desktop/FreqShow.desktop
-
+```
 If you want to use 2.8" or other small display
-
+````console
 sudo cp -r WQ7Tpanadapter/FreqShow_Small FreqShow_Small
 sudo cp -r FreqShow_Small/FreqShow.desktop Desktop/FreqShow.desktop
-
+```
 Now you should have a launcher file to double click on from the desktop
 
 READ READ READ THE PDF operating manual it will also show you how to save your own deafault parameters!
