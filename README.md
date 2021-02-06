@@ -40,7 +40,7 @@ make
 sudo make install
 sudo ldconfig
 
-sudo pip install pyrtlsdr
+sudo pip3 install pyrtlsdr
 ```
 
 INSTALL the WQ7Tpanadapter software 
