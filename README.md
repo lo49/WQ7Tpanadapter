@@ -54,7 +54,7 @@ sudo cp -r WQ7Tpanadapter/FreqShow_Large FreqShow_Large
 sudo cp -r FreqShow_Large/FreqShow.desktop Desktop/FreqShow.desktop
 ```
 If you want to use 2.8" or other small display
-````console
+```console
 sudo cp -r WQ7Tpanadapter/FreqShow_Small FreqShow_Small
 sudo cp -r FreqShow_Small/FreqShow.desktop Desktop/FreqShow.desktop
 ```
