@@ -29,7 +29,7 @@ import time
 import pygame
 
 import controller
-import model
+from model import *
 import ui
 
 
@@ -82,7 +82,7 @@ ui.Button.border_px    = 2
 
 if __name__ == '__main__':
 	# Initialize pygame and SDL to use the PiTFT display and touchscreen.
-	os.putenv('SDL_VIDEODRIVER', 'fbcon')
+	os.putenv('SDL_VIDEODVR', 'fbcon')
 	os.putenv('SDL_FBDEV'      , '/dev/fb1')
 	os.putenv('SDL_MOUSEDRV'   , 'TSLIB')
 	os.putenv('SDL_MOUSEDEV'   , '/dev/input/touchscreen')
@@ -99,7 +99,7 @@ if __name__ == '__main__':
 	pygame.display.update()
 	splash_start = time.time()
 	# Create model and controller.
-	fsmodel = model.FreqShowModel(size[0], size[1])
+	fsmodel = FreqShowModel(size[0], size[1])
 	fscontroller = controller.FreqShowController(fsmodel)
 	time.sleep(2.0)
 	# Main loop to process events and render current view.
