@@ -54,7 +54,7 @@ class FreqShowModel(object):
         self.set_sample_rate(.230)  # in MHz, must be within (.225001 <= sample_rate_mhz <= .300000) OR (.900001 <= sample_rate_mhz <= 3.200000)
         self.set_zoom_fac(.02)   # equal to the frequency span you want to display on the screen in MHz
         self.set_lo_offset(0.02) # Local Oscillator offset in MHz, slide the DC spike out of the window by this amount.
-        self.set_center_freq(70.451500) # frequency in MHz of my 1st IF
+        self.set_center_freq(103.451500) # frequency in MHz of my 1st IF
         self.set_gain('AUTO')
         self.set_fft_ave(3)
         self.set_tune_rate(.001) # in MHz  
