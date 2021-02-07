@@ -19,7 +19,7 @@ pandoc
 https://www.scipy.org/install.html
 install script :
 ```console
-sudo pip3 install --user numpy scipy matplotlib ipython jupyter pandas sympy nosepy game
+sudo pip3 install --user numpy scipy matplotlib ipython jupyter pandas sympy nosepy pygame
 ```
 OR
 alternate install script:
